@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Join the Sub-Saharan Regional Conference on Quality Skills Development, 14–16 May 2025 in Mombasa. Focused on transforming apprenticeship systems in Africa's informal economy." />
   <title>Sub-Saharan Regional Conference</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
   <!-- Header -->
@@ -43,17 +45,17 @@
       <p class="text-center mb-4">More speakers to be announced soon. Stay tuned!</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="text-center">
-          <img src="https://via.placeholder.com/150" alt="Speaker 1" class="rounded-full mx-auto mb-4">
+          <img src="https://via.placeholder.com/150" alt="Portrait of Dr. Amina Yusuf" class="rounded-full mx-auto mb-4">
           <h3 class="text-xl font-semibold">Dr. Amina Yusuf</h3>
           <p>TVET Policy Expert</p>
         </div>
         <div class="text-center">
-          <img src="https://via.placeholder.com/150" alt="Speaker 2" class="rounded-full mx-auto mb-4">
+          <img src="https://via.placeholder.com/150" alt="Portrait of Prof. John Odhiambo" class="rounded-full mx-auto mb-4">
           <h3 class="text-xl font-semibold">Prof. John Odhiambo</h3>
           <p>Regional Skills Advisor</p>
         </div>
         <div class="text-center">
-          <img src="https://via.placeholder.com/150" alt="Speaker 3" class="rounded-full mx-auto mb-4">
+          <img src="https://via.placeholder.com/150" alt="Portrait of Ms. Grace Banda" class="rounded-full mx-auto mb-4">
           <h3 class="text-xl font-semibold">Ms. Grace Banda</h3>
           <p>Apprenticeship Champion</p>
         </div>
@@ -61,22 +63,38 @@
     </div>
   </section>
 
+  <!-- Online Participation -->
+  <section class="bg-blue-100 py-10">
+    <div class="container mx-auto px-4 max-w-2xl text-center">
+      <h2 class="text-3xl font-bold mb-6">Join Online</h2>
+      <p class="mb-4">Can’t make it to Mombasa? Participate in the conference online from anywhere in the world.</p>
+      <a href="https://zoom.us/j/1234567890" target="_blank" class="bg-blue-700 text-white py-2 px-6 rounded text-lg hover:bg-blue-800 transition">Join the Conference Online</a>
+    </div>
+  </section>
+
   <!-- Registration Form -->
   <section class="bg-blue-50 py-10">
     <div class="container mx-auto px-4 max-w-lg">
       <h2 class="text-3xl font-bold text-center mb-6">Register Now</h2>
-      <form class="bg-white p-6 rounded shadow-md">
-        <input type="text" placeholder="Full Name" class="w-full mb-4 p-2 border rounded">
-        <input type="email" placeholder="Email Address" class="w-full mb-4 p-2 border rounded">
-        <input type="text" placeholder="Organization" class="w-full mb-4 p-2 border rounded">
+      <form name="registration" method="POST" data-netlify="true" class="bg-white p-6 rounded shadow-md">
+        <input type="hidden" name="form-name" value="registration" />
+        <input type="text" name="name" placeholder="Full Name" class="w-full mb-4 p-2 border rounded" required>
+        <input type="email" name="email" placeholder="Email Address" class="w-full mb-4 p-2 border rounded" required>
+        <input type="text" name="organization" placeholder="Organization" class="w-full mb-4 p-2 border rounded">
         <button type="submit" class="bg-blue-700 text-white py-2 px-4 rounded w-full">Submit</button>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-blue-900 text-white text-center p-4">
+  <footer class="bg-blue-900 text-white text-center p-6">
     <p>&copy; 2025 Sub-Saharan Regional Conference. All rights reserved.</p>
+    <p class="mt-2">Contact: <a href="mailto:info@ssrc2025.org" class="underline">info@ssrc2025.org</a> | Phone: +254-700-000-000</p>
+    <div class="mt-2 space-x-4">
+      <a href="#" class="hover:underline">Facebook</a>
+      <a href="#" class="hover:underline">Twitter</a>
+      <a href="#" class="hover:underline">LinkedIn</a>
+    </div>
   </footer>
 
   <!-- Countdown Script -->
@@ -99,6 +117,19 @@
       document.getElementById("countdown").innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     };
     setInterval(countdown, 1000);
+  </script>
+
+  <!-- Netlify Identity Redirect -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
   </script>
 </body>
 </html>
