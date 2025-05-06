@@ -9,42 +9,48 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <!-- Navigation Bar -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Sub-Saharan Conference</h1>
-      <button id="menu-toggle" class="lg:hidden text-gray-700 focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-      <nav id="menu" class="hidden lg:flex lg:space-x-6 text-gray-700 font-medium">
-        <a href="#about" class="hover:text-blue-600 block py-2">About</a>
-        <a href="#partners" class="hover:text-blue-600 block py-2">Partners</a>
-        <a href="#themes" class="hover:text-blue-600 block py-2">Themes</a>
-        <a href="#programs" class="hover:text-blue-600 block py-2">Programs</a>
-        <a href="#speakers" class="hover:text-blue-600 block py-2">Speakers</a>
-        <a href="#attendees" class="hover:text-blue-600 block py-2">Attendees</a>
-      </nav>
-    </div>
-    <div id="mobile-menu" class="lg:hidden hidden px-4 pb-4">
-      <a href="#about" class="block py-2 hover:text-blue-600">About</a>
-      <a href="#partners" class="block py-2 hover:text-blue-600">Partners</a>
-      <a href="#themes" class="block py-2 hover:text-blue-600">Themes</a>
-      <a href="#programs" class="block py-2 hover:text-blue-600">Programs</a>
-      <a href="#speakers" class="block py-2 hover:text-blue-600">Speakers</a>
-      <a href="#attendees" class="block py-2 hover:text-blue-600">Attendees</a>
-    </div>
-  </header>
 
   <!-- Header -->
   <header class="bg-blue-900 text-white p-6">
     <div class="container mx-auto text-center">
       <h1 class="text-4xl font-bold">2ND Sub-Saharan Regional Conference on Quality Skills Development</h1>
       <p class="mt-2 text-lg italic">Transforming Apprenticeship Systems in the Informal Economy for Youth Employability in Africa</p>
-      <p class="mt-1 text-sm">14TH -16TH May 2025 |Mombasa Continental Resort, Kenya</p>
+      <p class="mt-1 text-sm">14TH -16TH May 2025 | Mombasa Continental Resort, Kenya</p>
     </div>
   </header>
+
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="text-lg font-semibold text-blue-900">
+        <a href="#" class="hover:text-blue-700">Home</a>
+      </div>
+      <div class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="#about" class="text-blue-900 hover:text-blue-700">About</a>
+        <a href="#partners" class="text-blue-900 hover:text-blue-700">Partners</a>
+        <a href="#themes" class="text-blue-900 hover:text-blue-700">Themes</a>
+        <a href="#programs" class="text-blue-900 hover:text-blue-700">Programs</a>
+        <a href="#speakers" class="text-blue-900 hover:text-blue-700">Speakers</a>
+        <a href="#attendees" class="text-blue-900 hover:text-blue-700">Attendees</a>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-blue-900 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden px-4 pb-4 md:hidden space-y-2">
+      <a href="#about" class="block text-blue-900 hover:text-blue-700">About</a>
+      <a href="#partners" class="block text-blue-900 hover:text-blue-700">Partners</a>
+      <a href="#themes" class="block text-blue-900 hover:text-blue-700">Themes</a>
+      <a href="#programs" class="block text-blue-900 hover:text-blue-700">Programs</a>
+      <a href="#speakers" class="block text-blue-900 hover:text-blue-700">Speakers</a>
+      <a href="#attendees" class="block text-blue-900 hover:text-blue-700">Attendees</a>
+    </div>
+  </nav>
 
   <!-- Countdown -->
   <section class="bg-blue-100 py-6">
@@ -55,30 +61,47 @@
   </section>
 
   <!-- Speakers -->
-  <!-- Speakers Section -->
   <section id="speakers" style="padding: 40px; background-color: #f9f9f9; text-align: center;">
     <h2 style="font-size: 2em; margin-bottom: 20px;">Conference Speakers</h2>
 
-    <!-- Chief Guest -->
     <div class="chief-guest" style="margin-bottom: 50px;">
-      <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/AL/AL.jpg" alt="Chief Guest" style="display: block; margin: 0 auto; width: 90%; max-width: 550px; border-radius: 16px; box-shadow: 0 6px 15px rgba(0,0,0,0.2); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      <p style="margin-top: 10px; font-weight: bold;">Hon. (Dr.) Alfred Mutua,EGH<br>
+      <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/AL/AL.jpg" alt="Chief Guest"
+        style="display: block; margin: 0 auto; width: 90%; max-width: 550px; border-radius: 16px; box-shadow: 0 6px 15px rgba(0,0,0,0.2); transition: transform 0.3s ease;"
+        onmouseover="this.style.transform='scale(1.05)'" 
+        onmouseout="this.style.transform='scale(1)'">
+      <p style="margin-top: 10px; font-weight: bold;">Hon. (Dr.) Alfred Mutua, EGH</p>
       <p>Cabinet Secretary Ministry of Labour and Social Protection </p>
     </div>
 
-    <!-- Other Guest Speakers -->
-    <div class="guest-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1500px; margin: 0 auto;">
-      <div class="guest-card" style="background: #fff; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 15px; width: 100%; max-width: 350px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'">
+    <div class="guest-grid" style="
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1500px;
+      margin: 0 auto;
+    ">
+      <div class="guest-card" style="
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        padding: 15px;
+        width: 100%;
+        max-width: 350px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'">
         <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/Image/HE%20Kashim%20Shetima.jpg" alt="Speaker 2" style="width: 100%; border-radius: 12px; margin-bottom: 10px;">
         <p><strong>HE Kashim Shetima</strong></p>
         <p>Vice President, Federal Republic of Nigeria</p>
       </div>
-      <div class="guest-card" style="background: #fff; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 15px; width: 100%; max-width: 350px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'">
+
+      <div class="guest-card" style="background: #fff; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 15px; width: 100%; max-width: 350px;">
         <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/Julius.jpg" alt="Speaker 3" style="width: 100%; border-radius: 12px; margin-bottom: 10px;">
         <p><strong>Hon. Julius Migos Ogamba</strong></p>
         <p>Cabinet Secretary Ministry of Education</p>
       </div>
-      <div class="guest-card" style="background: #fff; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 15px; width: 100%; max-width: 350px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'">
+
+      <div class="guest-card" style="background: #fff; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 15px; width: 100%; max-width: 350px;">
         <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/Image/Dr.%20Justin%20Valentin.jpg" alt="Speaker 4" style="width: 100%; border-radius: 12px; margin-bottom: 10px;">
         <p><strong>Dr. Justin Valentin</strong></p>
         <p>Minister for Education Republic for Seychelles</p>
@@ -124,7 +147,7 @@
   <!-- Footer -->
   <footer class="bg-blue-900 text-white text-center p-6">
     <p>&copy; 2025 Sub-Saharan Regional Conference. All rights reserved.</p>
-    <p class="mt-2">Contact: <a href="mailto:info@ssrc2025.org" class="underline">skillsdevelopment@labour.go.ke</a> | Phone: +254-700-000-000</p>
+    <p class="mt-2">Contact: <a href="mailto:skillsdevelopment@labour.go.ke" class="underline">skillsdevelopment@labour.go.ke</a> | Phone: +254-700-000-000</p>
     <div class="mt-2 space-x-4">
       <a href="#" class="hover:underline">Facebook</a>
       <a href="#" class="hover:underline">Twitter</a>
@@ -154,7 +177,7 @@
     setInterval(countdown, 1000);
   </script>
 
-  <!-- Mobile Menu Toggle Script -->
+  <!-- Mobile Menu Toggle -->
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -164,17 +187,5 @@
     });
   </script>
 
-  <!-- Netlify Identity Redirect -->
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
 </body>
 </html>
