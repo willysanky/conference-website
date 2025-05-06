@@ -1,135 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Join the Sub-Saharan Regional Conference on Quality Skills Development, 14–16 May 2025 in Mombasa. Focused on transforming apprenticeship systems in Africa's informal economy." />
-  <title>Sub-Saharan Regional Conference</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body class="bg-gray-50 text-gray-800">
-  <!-- Header -->
-  <header class="bg-blue-900 text-white p-6">
-    <div class="container mx-auto text-center">
-      <h1 class="text-4xl font-bold">Sub-Saharan Regional Conference on Quality Skills Development</h1>
-      <p class="mt-2 text-lg italic">Transforming Apprenticeship Systems in the Informal Economy for Youth Employability in Africa</p>
-      <p class="mt-1 text-sm">14–16 May 2025 | Intercontinental Hotel, Mombasa</p>
-    </div>
-  </header>
-
-  <!-- Countdown -->
-  <section class="bg-blue-100 py-6">
-    <div class="container mx-auto text-center">
-      <p class="text-xl font-semibold">Conference Starts In:</p>
-      <div id="countdown" class="text-2xl mt-2 font-mono"></div>
-    </div>
-  </section>
-
-  <!-- Agenda -->
-  <section class="py-10">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Agenda</h2>
-      <ul class="space-y-4">
-        <li><strong>14 May 2025:</strong> Opening Ceremony, Keynote Speeches</li>
-        <li><strong>15 May 2025:</strong> Breakout Sessions, Panel Discussions, Networking</li>
-        <li><strong>16 May 2025:</strong> Policy Dialogues, Commitments & Closing</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Speakers -->
-  <section class="bg-white py-10">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Speakers</h2>
-      <p class="text-center mb-4">More speakers to be announced soon. Stay tuned!</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="text-center">
-          <img src="https://via.placeholder.com/150" alt="Portrait of Dr. Amina Yusuf" class="rounded-full mx-auto mb-4">
-          <h3 class="text-xl font-semibold">Dr. Amina Yusuf</h3>
-          <p>TVET Policy Expert</p>
-        </div>
-        <div class="text-center">
-          <img src="https://via.placeholder.com/150" alt="Portrait of Prof. John Odhiambo" class="rounded-full mx-auto mb-4">
-          <h3 class="text-xl font-semibold">Prof. John Odhiambo</h3>
-          <p>Regional Skills Advisor</p>
-        </div>
-        <div class="text-center">
-          <img src="https://via.placeholder.com/150" alt="Portrait of Ms. Grace Banda" class="rounded-full mx-auto mb-4">
-          <h3 class="text-xl font-semibold">Ms. Grace Banda</h3>
-          <p>Apprenticeship Champion</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Online Participation -->
-  <section class="bg-blue-100 py-10">
-    <div class="container mx-auto px-4 max-w-2xl text-center">
-      <h2 class="text-3xl font-bold mb-6">Join Online</h2>
-      <p class="mb-4">Can’t make it to Mombasa? Participate in the conference online from anywhere in the world.</p>
-      <a href="https://zoom.us/j/1234567890" target="_blank" class="bg-blue-700 text-white py-2 px-6 rounded text-lg hover:bg-blue-800 transition">Join the Conference Online</a>
-    </div>
-  </section>
-
-  <!-- Registration Form -->
-  <section class="bg-blue-50 py-10">
-    <div class="container mx-auto px-4 max-w-lg">
-      <h2 class="text-3xl font-bold text-center mb-6">Register Now</h2>
-      <form name="registration" method="POST" data-netlify="true" class="bg-white p-6 rounded shadow-md">
-        <input type="hidden" name="form-name" value="registration" />
-        <input type="text" name="name" placeholder="Full Name" class="w-full mb-4 p-2 border rounded" required>
-        <input type="email" name="email" placeholder="Email Address" class="w-full mb-4 p-2 border rounded" required>
-        <input type="text" name="organization" placeholder="Organization" class="w-full mb-4 p-2 border rounded">
-        <button type="submit" class="bg-blue-700 text-white py-2 px-4 rounded w-full">Submit</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-blue-900 text-white text-center p-6">
-    <p>&copy; 2025 Sub-Saharan Regional Conference. All rights reserved.</p>
-    <p class="mt-2">Contact: <a href="mailto:info@ssrc2025.org" class="underline">info@ssrc2025.org</a> | Phone: +254-700-000-000</p>
-    <div class="mt-2 space-x-4">
-      <a href="#" class="hover:underline">Facebook</a>
-      <a href="#" class="hover:underline">Twitter</a>
-      <a href="#" class="hover:underline">LinkedIn</a>
-    </div>
-  </footer>
-
-  <!-- Countdown Script -->
-  <script>
-    const countdown = () => {
-      const eventDate = new Date("2025-05-14T09:00:00").getTime();
-      const now = new Date().getTime();
-      const diff = eventDate - now;
-
-      if (diff < 0) {
-        document.getElementById("countdown").innerText = "Conference is live!";
-        return;
-      }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      document.getElementById("countdown").innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    };
-    setInterval(countdown, 1000);
-  </script>
-
-  <!-- Netlify Identity Redirect -->
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub-Saharan Regional Conference on Quality Skills Development and Apprenticeship</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
-      });
-    }
-  </script>
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        #event-agenda {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2em;
+        }
+        .agenda-day {
+            margin-bottom: 20px;
+        }
+        .agenda-day h3 {
+            font-size: 1.5em;
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sub-Saharan Regional Conference on Quality Skills Development and Apprenticeship</h1>
+        <nav>
+            <a href="#event-agenda">Agenda</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="event-agenda">
+        <h2>Conference Agenda</h2>
+
+        <div class="agenda-day">
+            <h3>DAY 1 – Wednesday, 14 May, 2025</h3>
+            <table>
+                <tr><td>0800 – 0830</td><td>Registration</td></tr>
+                <tr><td>0830 – 0930</td><td>OFFICIAL OPENING CEREMONY</td></tr>
+                <tr><td>0930 – 1000</td><td>PHOTO SESSION - HEALTH BREAK & EXHIBITION VIEWING</td></tr>
+                <tr><td>1000 – 1300</td><td>High-level Ministerial Session - Quality Skills Development and Apprenticeship</td></tr>
+                <tr><td>1300 – 1400</td><td>LUNCH & EXHIBITION VIEWING</td></tr>
+                <tr><td>1400 – 1600</td><td>High-level Ministerial Session - Quality Skills Development and Apprenticeship</td></tr>
+                <tr><td>1600 – 1630</td><td>HEALTH BREAK & EXHIBITION VIEWING</td></tr>
+                <tr><td>1630 – 1730</td><td>Parallel Session 1: SASASNET Annual General Meeting (AGM)</td></tr>
+                <tr><td>1630 – 1730</td><td>Parallel Session 2: Youth perspective on quality skills development and apprenticeships</td></tr>
+            </table>
+        </div>
+
+        <div class="agenda-day">
+            <h3>DAY 2 – Thursday, 15 May, 2025</h3>
+            <table>
+                <tr><td>0800 – 0830</td><td>Registration and exhibition viewing</td></tr>
+                <tr><td>0830 – 1000</td><td>Parallel Session 1: Regional frameworks for quality skills development and apprenticeship</td></tr>
+                <tr><td>0830 – 1000</td><td>Parallel Session 2: Roles and initiatives in financing of quality skills and apprenticeship in Africa</td></tr>
+                <tr><td>1000 – 1030</td><td>HEALTH BREAK & EXHIBITION VIEWING</td></tr>
+                <tr><td>1030 – 1300</td><td>Parallel Session 1: Best practices in skills development: Key lessons from global skills initiatives</td></tr>
+                <tr><td>1030 – 1300</td><td>Parallel Session 2: Global policy framework and best practice</td></tr>
+                <tr><td>1300 – 1400</td><td>LUNCH & EXHIBITION VIEWING</td></tr>
+                <tr><td>1400 – 1600</td><td>Parallel Session 1: Role and initiatives of development partners in supporting and funding Quality Skills and Apprenticeship in Africa</td></tr>
+                <tr><td>1400 – 1600</td><td>Parallel Session 3: The role of sector skills council in enhancing skills development: Key lessons from Africa</td></tr>
+            </table>
+        </div>
+
+        <div class="agenda-day">
+            <h3>DAY 3 – Friday, 16 May, 2025</h3>
+            <table>
+                <tr><td>0800 – 0830</td><td>Tea break</td></tr>
+                <tr><td>0830 – 1000</td><td>Parallel Session 1: Regional cooperation</td></tr>
+                <tr><td>0830 – 1000</td><td>Parallel Session 3: Best practices in skills development: Key lessons from Africa</td></tr>
+                <tr><td>1000 – 1030</td><td>HEALTH BREAK & EXHIBITION VIEWING</td></tr>
+                <tr><td>1030 – 1300</td><td>Mombasa Declaration on Advancing Economic Transition, Quality Skills Development and Apprenticeship</td></tr>
+                <tr><td>1300 – 1400</td><td>Lunch</td></tr>
+                <tr><td>1400 – 1600</td><td>Organized Tour for the Guests</td></tr>
+            </table>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2025 Sub-Saharan Regional Conference on Quality Skills Development and Apprenticeship. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
