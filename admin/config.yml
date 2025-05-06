@@ -1,10 +1,10 @@
 backend:
   name: github
-  repo: willysanky/subsaharanconference
+  repo: willysanky/[your-repo-name] # 👈 Replace with your actual GitHub repo
   branch: main
   site_domain: subsaharanconference.netlify.app
 
-media_folder: "images/uploads"
+media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
@@ -16,5 +16,4 @@ collections:
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Photo", name: "photo", widget: "image" }
-      - { label: "Bio", name: "bio", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
