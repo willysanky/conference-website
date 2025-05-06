@@ -40,36 +40,88 @@
   </section>
 
   <!-- Speakers -->
-  <section class="bg-white py-10">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Speakers</h2>
-      <p class="text-center mb-4">More speakers to be announced soon. Stay tuned!</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <div class="text-center">
-          <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/AL/AL.jpg" alt="Portrait of Dr. Alfred Mutua" class="rounded-full mx-auto mb-8">
-          <h3 class="text-xl font-semibold">Hon. (Dr.) Alfred Mutua,EGH</h3>
-          <p>Cabinet Secretary Ministry of Labour and Social Protection </p>
-        </div>
-        
-        <div class="text-center">
-          <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/Image/HE%20Kashim%20Shetima.jpg" alt="Portrait of HE Kashim Shetima" class="rounded-full mx-auto mb-4">
-          <h3 class="text-xl font-semibold">HE Kashim Shetima</h3>
-          <p>Vice President, Federal Republic of Nigeria</p>
-        </div>
-        <div class="text-center">
-          <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/Julius.jpg" alt="Portrait of HE Kashim Shetima" class="rounded-full mx-auto mb-4">
-          <h3 class="text-xl font-semibold">Hon. Julius Migos Ogamba</h3>
-          <p>Cabinet Secretary Ministry of education</p>
-        </div>
-        <div class="text-center">
-          <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/Image/Dr.%20Justin%20Valentin.jpg" alt="Portrait of Dr. Justin Valentin" class="rounded-full mx-auto mb-4">
-          <h3 class="text-xl font-semibold">Dr. Justin Valentin</h3>
-          <p>Minister for Education Republic for Seychelles</p>
-        </div>
-      </div>
+  <!-- Speakers Section -->
+<section id="speakers" style="padding: 40px; background-color: #f9f9f9; text-align: center;">
+  <h2 style="font-size: 2em; margin-bottom: 20px;">Conference Speakers</h2>
+
+  <!-- Chief Guest -->
+  <div class="chief-guest" style="margin-bottom: 50px;">
+    <h3 style="font-size: 1.5em;">Chief Guest</h3>
+    <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/AL/AL.jpg" alt="Chief Guest" style="width: 90%; max-width: 320px; border-radius: 16px; box-shadow: 0 6px 15px rgba(0,0,0,0.2); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    <p style="margin-top: 10px; font-weight: bold;">Hon. (Dr.) Alfred Mutua,EGH<br><span style="font-weight: normal;">Cabinet Secretary Ministry of Labour and Social Protection </span></p>
+  </div>
+
+  <!-- Other Guest Speakers -->
+  <div class="guest-grid" style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  ">
+
+    <div class="guest-card" style="
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 15px;
+      width: 100%;
+      max-width: 200px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'">
+      <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/Image/HE%20Kashim%20Shetima.jpg" alt="Speaker 2" style="width: 100%; border-radius: 12px; margin-bottom: 10px;">
+      <p><strong>HE Kashim Shetima</strong></p>
+      <p>Vice President, Federal Republic of Nigeria</p>
     </div>
-  </section>
+
+    <div class="guest-card" style="
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 15px;
+      width: 100%;
+      max-width: 200px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'">
+      <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/Julius.jpg" alt="Speaker 3" style="width: 100%; border-radius: 12px; margin-bottom: 10px;">
+      <p><strong>Hon. Julius Migos Ogamba</strong></p>
+      <p>Cabinet Secretary Ministry of Education</p>
+    </div>
+
+    <div class="guest-card" style="
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 15px;
+      width: 100%;
+      max-width: 200px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'">
+      <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/Image/Dr.%20Justin%20Valentin.jpg" alt="Speaker 4" style="width: 100%; border-radius: 12px; margin-bottom: 10px;">
+      <p><strong>Dr. Justin Valentin</strong></p>
+      <p>Minister for Education Republic for Seychelles</p>
+    </div>
+
+    <!-- Add more speaker cards here -->
+    
+  </div>
+</section>
+
+<!-- Responsive Media Query (optional but recommended) -->
+<style>
+  @media screen and (max-width: 600px) {
+    .guest-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guest-card {
+      max-width: 90% !important;
+    }
+  }
+</style>
+
 
   <!-- Online Participation -->
   <section class="bg-blue-100 py-10">
