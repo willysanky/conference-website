@@ -117,26 +117,30 @@
 <section class="bg-blue-50 py-10" id="registration">
   <div class="container mx-auto px-4 max-w-lg">
     <h2 class="text-3xl font-bold text-center mb-6">Register Now</h2>
-    <form name="registration" method="POST" data-netlify="true" class="bg-white p-6 rounded shadow-md">
+
+    <form name="registration" method="POST" data-netlify="true" action="/thankyou.html" class="bg-white p-6 rounded shadow-md">
+      <!-- Hidden input required by Netlify -->
       <input type="hidden" name="form-name" value="registration" />
-      
-      <label class="block mb-2 font-medium">Full Name</label>
-      <input type="text" name="name" placeholder="Full Name" class="w-full mb-4 p-2 border rounded" required>
 
-      <label class="block mb-2 font-medium">Email Address</label>
-      <input type="email" name="email" placeholder="Email Address" class="w-full mb-4 p-2 border rounded" required>
+      <!-- Full Name Field -->
+      <label class="block mb-2 font-medium" for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Full Name" class="w-full mb-4 p-2 border rounded" required>
 
-      <label class="block mb-2 font-medium">Organization</label>
-      <input type="text" name="organization" placeholder="Organization" class="w-full mb-4 p-2 border rounded">
+      <!-- Email Field -->
+      <label class="block mb-2 font-medium" for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Email Address" class="w-full mb-4 p-2 border rounded" required>
 
+      <!-- Organization Field -->
+      <label class="block mb-2 font-medium" for="organization">Organization</label>
+      <input type="text" id="organization" name="organization" placeholder="Organization" class="w-full mb-4 p-2 border rounded">
+
+      <!-- Submit Button -->
       <button type="submit" class="bg-blue-700 text-white py-2 px-4 rounded w-full hover:bg-blue-800 transition">
         Submit
       </button>
     </form>
-    <form name="registration" method="POST" data-netlify="true" action="/thankyou.html" class="bg-white p-6 rounded shadow-md">
   </div>
 </section>
-
 
   <!-- Footer -->
   <footer class="bg-blue-900 text-white text-center p-6">
