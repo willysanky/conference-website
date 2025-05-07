@@ -48,6 +48,8 @@
       <button class="tab-button hover:text-blue-700 block py-2" data-tab="themes">Themes</button>
       <button class="tab-button hover:text-blue-700 block py-2" data-tab="programs">Programs</button>
       <button class="tab-button hover:text-blue-700 block py-2" data-tab="speakers">Speakers</button>
+      <button class="tab-button hover:text-blue-700 block py-2" data-tab="attendees">Attendees</button>
+      <button class="tab-button hover:text-blue-700 block py-2" data-tab="partners">Partners</button>
     </div>
 
     <!-- Right Logo -->
@@ -66,6 +68,8 @@
     <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="themes">Themes</button>
     <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="programs">Programs</button>
     <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="speakers">Speakers</button>
+    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="attendees">Attendees</button>
+    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="partners">Partners</button>
   </div>
 </nav>
 
@@ -73,35 +77,30 @@
 <section class="py-12 px-6 bg-white">
   <div class="container mx-auto max-w-5xl">
     <!-- Tab Content Sections -->
-    <div id="about" class="tab-content hidden">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">About the Conference</h2>
-      <p class="text-gray-700 leading-relaxed">
-        This regional conference brings together stakeholders from across Sub-Saharan Africa to discuss strategies for transforming apprenticeship systems in the informal economy. It aims to promote youth employability through policy dialogue, shared best practices, and innovative partnerships.
-      </p>
-    </div>
-
-    <div id="themes" class="tab-content hidden">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">Conference Themes</h2>
-      <ul class="list-disc pl-5 text-gray-700 space-y-2">
-        <li>Innovative models of apprenticeship for informal sector skills development</li>
-        <li>Strengthening policy frameworks to support apprenticeships</li>
-        <li>Financing and incentivizing apprenticeship systems</li>
-        <li>Gender and inclusion in informal economy training programs</li>
-      </ul>
-    </div>
-
+    <div id="about" class="tab-content hidden">...</div>
+    <div id="themes" class="tab-content hidden">...</div>
     <div id="programs" class="tab-content hidden">
       <h2 class="text-2xl font-bold text-blue-900 mb-4">Programs & Activities</h2>
       <p class="text-gray-700 leading-relaxed">
         The conference features keynote presentations, panel discussions, workshops, exhibitions, and a youth innovation showcase. Participants will have opportunities to network and explore collaborative projects.
       </p>
+      <a href="https://example.com/program.pdf" target="_blank" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Download Full Program (PDF)</a>
     </div>
-
-    <div id="speakers" class="tab-content hidden">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">Key Speakers</h2>
+    <div id="speakers" class="tab-content hidden">...</div>
+    <div id="attendees" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Who Should Attend?</h2>
       <p class="text-gray-700 leading-relaxed">
-        A distinguished lineup of government officials, experts, and youth leaders from across Africa and beyond will share their experiences and insights on apprenticeship systems and youth employment strategies.
+        Policymakers, employers, educators, youth leaders, and development partners involved in skills development, vocational training, and labor market integration are invited to attend this important event.
       </p>
+    </div>
+    <div id="partners" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Our Partners</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <img src="https://via.placeholder.com/150x100" alt="Partner 1" class="object-contain h-24 mx-auto">
+        <img src="https://via.placeholder.com/150x100" alt="Partner 2" class="object-contain h-24 mx-auto">
+        <img src="https://via.placeholder.com/150x100" alt="Partner 3" class="object-contain h-24 mx-auto">
+        <img src="https://via.placeholder.com/150x100" alt="Partner 4" class="object-contain h-24 mx-auto">
+      </div>
     </div>
   </div>
 </section>
@@ -133,7 +132,6 @@
     if (contents.length) contents[0].classList.remove("hidden");
   });
 </script>
-
 
 
   <!-- Countdown -->
