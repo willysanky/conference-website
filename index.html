@@ -162,58 +162,74 @@
     </div>
   </section>
   
-   <!-- About Section -->
-<section id="about" class="py-12 bg-blue-50">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">About the Conference</h2>
-    <p class="text-gray-700 leading-relaxed">
-      This regional conference brings together stakeholders from across Sub-Saharan Africa to discuss strategies for transforming apprenticeship systems in the informal economy. It aims to promote youth employability through policy dialogue, shared best practices, and innovative partnerships.
-    </p>
+  <!-- Tabbed Content Layout -->
+<section class="py-12 px-6 bg-white">
+  <div class="container mx-auto max-w-5xl">
+    <div class="mb-6 border-b border-gray-300">
+      <nav class="flex flex-wrap gap-4 text-blue-900 font-semibold">
+        <button class="tab-button px-4 py-2" data-tab="about">About</button>
+        <button class="tab-button px-4 py-2" data-tab="themes">Themes</button>
+        <button class="tab-button px-4 py-2" data-tab="programs">Programs</button>
+        <button class="tab-button px-4 py-2" data-tab="speakers">Speakers</button>
+      </nav>
+    </div>
+
+    <!-- Tab Content Sections -->
+    <div id="about" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">About the Conference</h2>
+      <p class="text-gray-700 leading-relaxed">
+        This regional conference brings together stakeholders from across Sub-Saharan Africa to discuss strategies for transforming apprenticeship systems in the informal economy. It aims to promote youth employability through policy dialogue, shared best practices, and innovative partnerships.
+      </p>
+    </div>
+
+    <div id="themes" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Conference Themes</h2>
+      <ul class="list-disc pl-5 text-gray-700 space-y-2">
+        <li>Innovative models of apprenticeship for informal sector skills development</li>
+        <li>Strengthening policy frameworks to support apprenticeships</li>
+        <li>Financing and incentivizing apprenticeship systems</li>
+        <li>Gender and inclusion in informal economy training programs</li>
+      </ul>
+    </div>
+
+    <div id="programs" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Programs & Activities</h2>
+      <p class="text-gray-700 leading-relaxed">
+        The conference features keynote presentations, panel discussions, workshops, exhibitions, and a youth innovation showcase. Participants will have opportunities to network and explore collaborative projects.
+      </p>
+    </div>
+
+    <div id="speakers" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Key Speakers</h2>
+      <p class="text-gray-700 leading-relaxed">
+        A distinguished lineup of government officials, experts, and youth leaders from across Africa and beyond will share their experiences and insights on apprenticeship systems and youth employment strategies.
+      </p>
+    </div>
   </div>
 </section>
 
-<!-- Themes Section -->
-<section id="themes" class="py-12 bg-blue-50">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">Conference Themes</h2>
-    <ul class="list-disc pl-5 text-gray-700 space-y-2">
-      <li>Innovative models of apprenticeship for informal sector skills development</li>
-      <li>Strengthening policy frameworks to support apprenticeships</li>
-      <li>Financing and incentivizing apprenticeship systems</li>
-      <li>Gender and inclusion in informal economy training programs</li>
-    </ul>
-  </div>
-</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".tab-button");
+    const contents = document.querySelectorAll(".tab-content");
 
-<!-- Programs Section -->
-<section id="programs" class="py-12 bg-white">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">Programs & Activities</h2>
-    <p class="text-gray-700 leading-relaxed">
-      The conference features keynote presentations, panel discussions, workshops, exhibitions, and a youth innovation showcase. Participants will have opportunities to network and explore collaborative projects.
-    </p>
-  </div>
-</section>
+    function hideAllTabs() {
+      contents.forEach(c => c.classList.add("hidden"));
+    }
 
-<!-- Speakers Section -->
-<section id="speakers" class="py-12 bg-blue-50">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">Key Speakers</h2>
-    <p class="text-gray-700 leading-relaxed">
-      A distinguished lineup of government officials, experts, and youth leaders from across Africa and beyond will share their experiences and insights on apprenticeship systems and youth employment strategies.
-    </p>
-  </div>
-</section>
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-tab");
+        hideAllTabs();
+        document.getElementById(target).classList.remove("hidden");
+      });
+    });
 
-<!-- Attendees Section -->
-<section id="attendees" class="py-12 bg-white">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">Who Should Attend?</h2>
-    <p class="text-gray-700 leading-relaxed">
-      Policymakers, employers, educators, youth leaders, and development partners involved in skills development, vocational training, and labor market integration are invited to attend this important event.
-    </p>
-  </div>
-</section>
+    // Show first tab by default
+    if (contents.length) contents[0].classList.remove("hidden");
+  });
+</script>
+
   
 <!-- Partners Section -->
 <section id="partners" class="py-12 bg-white">
