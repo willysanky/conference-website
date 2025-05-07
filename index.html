@@ -21,10 +21,9 @@
     </div>
   </header>
   
-<!-- Responsive Navbar with Left Logo, Mobile Menu, and Right Logo -->
-<nav class="bg-white shadow-md">
+<!-- Responsive Navbar with Logos and Tabbed Content -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
   <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-
     <!-- Left Logo -->
     <div class="flex-shrink-0">
       <img 
@@ -38,44 +37,75 @@
     <div class="md:hidden">
       <button id="menu-toggle" class="text-blue-900 focus:outline-none">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
     </div>
 
-    <!-- Navigation Menu (centered on desktop) -->
+    <!-- Navigation Menu -->
     <div id="nav-menu" class="hidden md:flex md:space-x-6 md:text-base md:font-medium md:text-blue-900">
-      <a href="#about" class="hover:text-blue-700 block py-2">About</a>
-      <a href="#themes" class="hover:text-blue-700 block py-2">Themes</a>
-      <a href="#programs" class="hover:text-blue-700 block py-2">Programs</a>
-      <a href="#speakers" class="hover:text-blue-700 block py-2">Speakers</a>
-      <a href="#attendees" class="hover:text-blue-700 block py-2">Attendees</a>
-      <a href="#partners" class="hover:text-blue-700 block py-2">Partners</a>
+      <button class="tab-button hover:text-blue-700 block py-2" data-tab="about">About</button>
+      <button class="tab-button hover:text-blue-700 block py-2" data-tab="themes">Themes</button>
+      <button class="tab-button hover:text-blue-700 block py-2" data-tab="programs">Programs</button>
+      <button class="tab-button hover:text-blue-700 block py-2" data-tab="speakers">Speakers</button>
     </div>
 
-     <!-- Right Logo (Visible on all screen sizes) -->
-<div class="flex-shrink-0">
-  <img 
-    src="https://raw.githubusercontent.com/willysanky/conference-website/main/sasanet.jpg" 
-    alt="Sasanet Logo" 
-    class="h-20 w-40 md:h-24 md:w-48 object-contain"
-  />
-</div>
-
+    <!-- Right Logo -->
+    <div class="flex-shrink-0">
+      <img 
+        src="https://raw.githubusercontent.com/willysanky/conference-website/main/sasanet.jpg" 
+        alt="Sasanet Logo" 
+        class="h-20 w-40 md:h-24 md:w-48 object-contain"
+      />
+    </div>
+  </div>
 
   <!-- Mobile Navigation Dropdown -->
   <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2">
-    <a href="#about" class="block text-blue-900 hover:text-blue-700">About</a>
-    <a href="#themes" class="block text-blue-900 hover:text-blue-700">Themes</a>
-    <a href="#programs" class="block text-blue-900 hover:text-blue-700">Programs</a>
-    <a href="#speakers" class="block text-blue-900 hover:text-blue-700">Speakers</a>
-    <a href="#attendees" class="block text-blue-900 hover:text-blue-700">Attendees</a>
-    <a href="#partners" class="block text-blue-900 hover:text-blue-700">Partners</a>
+    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="about">About</button>
+    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="themes">Themes</button>
+    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="programs">Programs</button>
+    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="speakers">Speakers</button>
   </div>
 </nav>
 
-<!-- JavaScript to toggle mobile menu -->
+<!-- Tabbed Content Layout -->
+<section class="py-12 px-6 bg-white">
+  <div class="container mx-auto max-w-5xl">
+    <!-- Tab Content Sections -->
+    <div id="about" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">About the Conference</h2>
+      <p class="text-gray-700 leading-relaxed">
+        This regional conference brings together stakeholders from across Sub-Saharan Africa to discuss strategies for transforming apprenticeship systems in the informal economy. It aims to promote youth employability through policy dialogue, shared best practices, and innovative partnerships.
+      </p>
+    </div>
+
+    <div id="themes" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Conference Themes</h2>
+      <ul class="list-disc pl-5 text-gray-700 space-y-2">
+        <li>Innovative models of apprenticeship for informal sector skills development</li>
+        <li>Strengthening policy frameworks to support apprenticeships</li>
+        <li>Financing and incentivizing apprenticeship systems</li>
+        <li>Gender and inclusion in informal economy training programs</li>
+      </ul>
+    </div>
+
+    <div id="programs" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Programs & Activities</h2>
+      <p class="text-gray-700 leading-relaxed">
+        The conference features keynote presentations, panel discussions, workshops, exhibitions, and a youth innovation showcase. Participants will have opportunities to network and explore collaborative projects.
+      </p>
+    </div>
+
+    <div id="speakers" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Key Speakers</h2>
+      <p class="text-gray-700 leading-relaxed">
+        A distinguished lineup of government officials, experts, and youth leaders from across Africa and beyond will share their experiences and insights on apprenticeship systems and youth employment strategies.
+      </p>
+    </div>
+  </div>
+</section>
+
 <script>
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
@@ -83,7 +113,27 @@
   menuToggle.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".tab-button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    function hideAllTabs() {
+      contents.forEach(c => c.classList.add("hidden"));
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-tab");
+        hideAllTabs();
+        document.getElementById(target).classList.remove("hidden");
+      });
+    });
+
+    if (contents.length) contents[0].classList.remove("hidden");
+  });
 </script>
+
 
 
   <!-- Countdown -->
@@ -150,74 +200,7 @@
     </div>
   </section>
 
-  <!-- Tabbed Content Layout -->
-<section class="py-12 px-6 bg-white">
-  <div class="container mx-auto max-w-5xl">
-    <div class="mb-6 border-b border-gray-300 sticky top-0 bg-white z-10">
-      <nav class="flex flex-wrap gap-4 text-blue-900 font-semibold">
-        <button class="tab-button px-4 py-2" data-tab="about">About</button>
-        <button class="tab-button px-4 py-2" data-tab="themes">Themes</button>
-        <button class="tab-button px-4 py-2" data-tab="programs">Programs</button>
-        <button class="tab-button px-4 py-2" data-tab="speakers">Speakers</button>
-      </nav>
-    </div>
-
-    <!-- Tab Content Sections -->
-    <div id="about" class="tab-content hidden">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">About the Conference</h2>
-      <p class="text-gray-700 leading-relaxed">
-        This regional conference brings together stakeholders from across Sub-Saharan Africa to discuss strategies for transforming apprenticeship systems in the informal economy. It aims to promote youth employability through policy dialogue, shared best practices, and innovative partnerships.
-      </p>
-    </div>
-
-    <div id="themes" class="tab-content hidden">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">Conference Themes</h2>
-      <ul class="list-disc pl-5 text-gray-700 space-y-2">
-        <li>Innovative models of apprenticeship for informal sector skills development</li>
-        <li>Strengthening policy frameworks to support apprenticeships</li>
-        <li>Financing and incentivizing apprenticeship systems</li>
-        <li>Gender and inclusion in informal economy training programs</li>
-      </ul>
-    </div>
-
-    <div id="programs" class="tab-content hidden">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">Programs & Activities</h2>
-      <p class="text-gray-700 leading-relaxed">
-        The conference features keynote presentations, panel discussions, workshops, exhibitions, and a youth innovation showcase. Participants will have opportunities to network and explore collaborative projects.
-      </p>
-    </div>
-
-    <div id="speakers" class="tab-content hidden">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">Key Speakers</h2>
-      <p class="text-gray-700 leading-relaxed">
-        A distinguished lineup of government officials, experts, and youth leaders from across Africa and beyond will share their experiences and insights on apprenticeship systems and youth employment strategies.
-      </p>
-    </div>
-  </div>
-</section>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".tab-button");
-    const contents = document.querySelectorAll(".tab-content");
-
-    function hideAllTabs() {
-      contents.forEach(c => c.classList.add("hidden"));
-    }
-
-    buttons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const target = btn.getAttribute("data-tab");
-        hideAllTabs();
-        document.getElementById(target).classList.remove("hidden");
-      });
-    });
-
-    // Show first tab by default
-    if (contents.length) contents[0].classList.remove("hidden");
-  });
-</script>
-
+ 
 
   <!-- Online Participation -->
   <section class="bg-blue-100 py-10">
