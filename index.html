@@ -235,15 +235,36 @@
     </div>
   </section>
 
-<section id="register" class="py-12 px-6 bg-white">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Join the Sub-Saharan Regional Conference on Quality Skills Development and Apprenticeship, 14TH -16TH May 2025 in Mombasa. Focused on transforming apprenticeship systems in Africa's informal economy." />
+  <title>Sub-Saharan Regional Conference</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Registration Section -->
+  <section id="register" class="py-12 px-6 bg-white">
     <div class="container mx-auto max-w-3xl text-center">
       <h2 class="text-3xl font-semibold text-green-900 mb-6">Register to Attend</h2>
-      <form class="space-y-4 text-left">
-        <input type="text" placeholder="Full Name" class="w-full border border-gray-300 p-3 rounded-md" required>
-        <input type="email" placeholder="Email Address" class="w-full border border-gray-300 p-3 rounded-md" required>
-        <input type="text" placeholder="Organization" class="w-full border border-gray-300 p-3 rounded-md">
-        <input type="text" placeholder="Country" class="w-full border border-gray-300 p-3 rounded-md">
-        <select class="w-full border border-gray-300 p-3 rounded-md" required>
+      <!-- Form with Netlify Integration -->
+      <form name="registration-form" method="POST" data-netlify="true" class="space-y-4 text-left" onsubmit="showThankYouMessage(event)">
+        <!-- Hidden Input for Netlify Form -->
+        <input type="hidden" name="form-name" value="registration-form" />
+        
+        <input type="text" name="full_name" placeholder="Full Name" class="w-full border border-gray-300 p-3 rounded-md" required>
+        <input type="email" name="email" placeholder="Email Address" class="w-full border border-gray-300 p-3 rounded-md" required>
+        <input type="text" name="organization" placeholder="Organization" class="w-full border border-gray-300 p-3 rounded-md">
+        <input type="text" name="country" placeholder="Country" class="w-full border border-gray-300 p-3 rounded-md">
+        <select name="participant_type" class="w-full border border-gray-300 p-3 rounded-md" required>
           <option value="" disabled selected>Select Participant Type</option>
           <option>Government Official</option>
           <option>TVET Provider</option>
@@ -253,7 +274,28 @@
         </select>
         <button type="submit" class="bg-green-900 text-white px-6 py-3 rounded-md hover:bg-green-800">Submit Registration</button>
       </form>
+
+      <!-- Thank You Message -->
+      <div id="thank-you-message" class="mt-6 text-green-900 text-xl font-semibold" style="display: none;">
+        <p>Thank you for registering! We will contact you with more details.</p>
+      </div>
     </div>
+  </section>
+
+  <script>
+    // Function to display the Thank You message after form submission
+    function showThankYouMessage(event) {
+      event.preventDefault(); // Prevent form from submitting normally
+      // Show the Thank You message
+      document.getElementById('thank-you-message').style.display = 'block';
+      // Reset the form
+      event.target.reset();
+    }
+  </script>
+
+</body>
+</html>
+
 
 
   <!-- Footer -->
