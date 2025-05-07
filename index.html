@@ -7,305 +7,90 @@
   <title>Sub-Saharan Regional Conference</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  
-
-  <!-- Header -->
   <header class="bg-green-900 text-white p-6">
     <div class="container mx-auto text-center">
       <h1 class="text-4xl font-bold">2ND Sub-Saharan Regional Conference on Quality Skills Development and Apprenticeship</h1>
       <p class="mt-2 text-lg italic">Transforming Apprenticeship Systems in the Informal Economy for Youth Employability in Africa</p>
       <p class="mt-1 text-sm">14TH -16TH May 2025</p>
-      <p class="mt-1 text-sm" font-bold>Mombasa Continental Resort, Kenya</p>
+      <p class="mt-1 text-sm font-bold">Mombasa Continental Resort, Kenya</p>
     </div>
   </header>
-  
-<!-- Responsive Navbar with Left Logo, Mobile Menu, and Right Logo -->
-<nav class="bg-white shadow-md">
-  <div class="container mx-auto px-6 py-4 flex items-center justify-between">
 
-    <!-- Left Logo -->
-    <div class="flex-shrink-0">
-      <img 
-        src="https://raw.githubusercontent.com/willysanky/conference-website/main/Logos/Labourlogo.png" 
-        alt="Labour Logo" 
-        class="h-20 w-auto"
-      />
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <div class="md:hidden">
-      <button id="menu-toggle" class="text-blue-900 focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Navigation Menu (centered on desktop) -->
-    <div id="nav-menu" class="hidden md:flex md:space-x-6 md:text-base md:font-medium md:text-blue-900">
-      <a href="#about" class="hover:text-blue-700 block py-2">About</a>
-      <a href="#themes" class="hover:text-blue-700 block py-2">Themes</a>
-      <a href="#programs" class="hover:text-blue-700 block py-2">Programs</a>
-      <a href="#speakers" class="hover:text-blue-700 block py-2">Speakers</a>
-      <a href="#attendees" class="hover:text-blue-700 block py-2">Attendees</a>
-      <a href="#partners" class="hover:text-blue-700 block py-2">Partners</a>
-    </div>
-
-     <!-- Right Logo (Visible on all screen sizes) -->
-<div class="flex-shrink-0">
-  <img 
-    src="https://raw.githubusercontent.com/willysanky/conference-website/main/sasanet.jpg" 
-    alt="Sasanet Logo" 
-    class="h-20 w-40 md:h-24 md:w-48 object-contain"
-  />
-</div>
-
-
-  <!-- Mobile Navigation Dropdown -->
-  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2">
-    <a href="#about" class="block text-blue-900 hover:text-blue-700">About</a>
-    <a href="#themes" class="block text-blue-900 hover:text-blue-700">Themes</a>
-    <a href="#programs" class="block text-blue-900 hover:text-blue-700">Programs</a>
-    <a href="#speakers" class="block text-blue-900 hover:text-blue-700">Speakers</a>
-    <a href="#attendees" class="block text-blue-900 hover:text-blue-700">Attendees</a>
-    <a href="#partners" class="block text-blue-900 hover:text-blue-700">Partners</a>
-  </div>
-</nav>
-
-<!-- JavaScript to toggle mobile menu -->
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-</script>
-
-
-  <!-- Countdown -->
-  <section class="bg-yellow-100 py-6">
-    <div class="container mx-auto text-center">
-      <p class="text-xl font-semibold">Conference Starts In:</p>
-      <div id="countdown" class="text-2xl mt-2 font-mono"></div>
-    </div>
-  </section>
-  
-  <!-- Hero Landing with Background Video -->
-<section class="relative h-screen overflow-hidden" id="landing-theme">
-  <!-- Background Video -->
-  <video autoplay muted loop playsinline class="absolute w-full h-full object-cover z-0">
-    <source src="videos/conference-theme.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-blue-900 bg-opacity-50 z-10"></div>
-
-  <!-- Content -->
-  <div class="relative z-20 flex items-center justify-center h-full text-center px-4">
-    <div class="text-white max-w-2xl">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Transforming Apprenticeships in Africa</h1>
-      <p class="text-lg md:text-xl mb-6 leading-relaxed">
-        “Transforming Apprenticeship Systems in the Informal Economy for Youth Employability in Africa”
-      </p>
-      </a>
-    </div>
-  </div>
-</section>
-
- 
-  <!-- Speakers -->
-  <section id="speakers" style="padding: 40px; background-color: #f9f9f9; text-align: center;">
-    <h2 style="font-size: 2em; margin-bottom: 20px;">Conference Speakers</h2>
-    <div class="chief-guest" style="margin-bottom: 50px;">
-      <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/AL/AL.jpg" alt="Chief Guest"
-        style="display: block; margin: 0 auto; width: 90%; max-width: 550px; border-radius: 16px; box-shadow: 0 6px 15px rgba(0,0,0,0.2); transition: transform 0.3s ease;"
-        onmouseover="this.style.transform='scale(1.05)'" 
-        onmouseout="this.style.transform='scale(1)'">
-      <p style="margin-top: 10px; font-weight: bold;">Hon. (Dr.) Alfred Mutua, EGH</p>
-      <p>Cabinet Secretary Ministry of Labour and Social Protection, Republic of Kenya </p>
-    </div>
-    <div class="guest-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1500px; margin: 0 auto;">
-      <div class="guest-card" style="background: #fff; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 15px; width: 100%; max-width: 350px; transition: transform 0.3s ease, box-shadow 0.3s ease;"
-        onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.15)'" 
-        onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'">
-        <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/Image/HE%20Kashim%20Shetima.jpg" alt="Speaker 2" style="width: 100%; border-radius: 12px; margin-bottom: 10px;">
-        <p><strong>HE Kashim Shetima</strong></p>
-        <p>Vice President, Federal Republic of Nigeria</p>
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex-shrink-0">
+        <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/Logos/Labourlogo.png" alt="Labour Logo" class="h-20 w-auto" />
       </div>
-      <div class="guest-card" style="background: #fff; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 15px; width: 100%; max-width: 350px;">
-        <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/Julius.jpg" alt="Speaker 3" style="width: 100%; border-radius: 12px; margin-bottom: 10px;">
-        <p><strong>Hon. Julius Migos Ogamba</strong></p>
-        <p>Cabinet Secretary Ministry of Education, Republic of kenya</p>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-blue-900 focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
-      <div class="guest-card" style="background: #fff; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 15px; width: 100%; max-width: 350px;">
-        <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/Image/Dr.%20Justin%20Valentin.jpg" alt="Speaker 4" style="width: 100%; border-radius: 12px; margin-bottom: 10px;">
-        <p><strong>Dr. Justin Valentin</strong></p>
-        <p>Minister for Education Republic for Seychelles</p>
+      <div id="nav-menu" class="hidden md:flex md:space-x-6 md:text-base md:font-medium md:text-blue-900">
+        <a href="#about" class="hover:text-blue-700 block py-2">About</a>
+        <a href="#themes" class="hover:text-blue-700 block py-2">Themes</a>
+        <a href="documents/ConferenceProgramme.pdf" target="_blank" class="hover:text-blue-700 block py-2">Programme</a>
+        <a href="#speakers" class="hover:text-blue-700 block py-2">Speakers</a>
+        <a href="#attendees" class="hover:text-blue-700 block py-2">Attendees</a>
+        <a href="#partners" class="hover:text-blue-700 block py-2">Partners</a>
+        <a href="#register" class="hover:text-blue-700 block py-2">Register</a>
+      </div>
+      <div class="flex-shrink-0">
+        <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/sasanet.jpg" alt="Sasanet Logo" class="h-20 w-40 md:h-24 md:w-48 object-contain" />
       </div>
     </div>
-  </section>
-
-  <!-- Agenda -->
-  <section class="py-10">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-8">Agenda</h2>
-      <ul class="space-y-4 inline-block text-left">
-        <li><strong>14 May 2025:</strong> Opening Ceremony, Keynote Speeches</li>
-        <li><strong>15 May 2025:</strong> Breakout Sessions, Panel Discussions, Exhibition, Networking</li>
-        <li><strong>16 May 2025:</strong> Policy Dialogues, Commitments & Closing of the Conference</li>
-      </ul>
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2">
+      <a href="#about" class="block text-blue-900 hover:text-blue-700">About</a>
+      <a href="#themes" class="block text-blue-900 hover:text-blue-700">Themes</a>
+      <a href="documents/ConferenceProgramme.pdf" target="_blank" class="block text-blue-900 hover:text-blue-700">Programme</a>
+      <a href="#speakers" class="block text-blue-900 hover:text-blue-700">Speakers</a>
+      <a href="#attendees" class="block text-blue-900 hover:text-blue-700">Attendees</a>
+      <a href="#partners" class="block text-blue-900 hover:text-blue-700">Partners</a>
+      <a href="#register" class="block text-blue-900 hover:text-blue-700">Register</a>
     </div>
-  </section>
-  
-   <!-- About Section -->
-<section id="about" class="py-12 bg-blue-50">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">About the Conference</h2>
-    <p class="text-gray-700 leading-relaxed">
-      This regional conference brings together stakeholders from across Sub-Saharan Africa to discuss strategies for transforming apprenticeship systems in the informal economy. It aims to promote youth employability through policy dialogue, shared best practices, and innovative partnerships.
-    </p>
-  </div>
-</section>
+  </nav>
 
-<!-- Themes Section -->
-<section id="themes" class="py-12 bg-blue-50">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">Conference Themes</h2>
-    <ul class="list-disc pl-5 text-gray-700 space-y-2">
-      <li>Innovative models of apprenticeship for informal sector skills development</li>
-      <li>Strengthening policy frameworks to support apprenticeships</li>
-      <li>Financing and incentivizing apprenticeship systems</li>
-      <li>Gender and inclusion in informal economy training programs</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Programs Section -->
-<section id="programs" class="py-12 bg-white">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">Programs & Activities</h2>
-    <p class="text-gray-700 leading-relaxed">
-      The conference features keynote presentations, panel discussions, workshops, exhibitions, and a youth innovation showcase. Participants will have opportunities to network and explore collaborative projects.
-    </p>
-  </div>
-</section>
-
-<!-- Speakers Section -->
-<section id="speakers" class="py-12 bg-blue-50">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">Key Speakers</h2>
-    <p class="text-gray-700 leading-relaxed">
-      A distinguished lineup of government officials, experts, and youth leaders from across Africa and beyond will share their experiences and insights on apprenticeship systems and youth employment strategies.
-    </p>
-  </div>
-</section>
-
-<!-- Attendees Section -->
-<section id="attendees" class="py-12 bg-white">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">Who Should Attend?</h2>
-    <p class="text-gray-700 leading-relaxed">
-      Policymakers, employers, educators, youth leaders, and development partners involved in skills development, vocational training, and labor market integration are invited to attend this important event.
-    </p>
-  </div>
-</section>
-  
-<!-- Partners Section -->
-<section id="partners" class="py-12 bg-white">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <h2 class="text-2xl font-bold text-blue-900 mb-4">Our Partners</h2>
-    <p class="text-gray-700 leading-relaxed">
-      We are proud to partner with governments, private sector companies, training institutions, and international development organizations committed to skills development and youth employment.
-    </p>
-  </div>
-</section>
-
-
-  <!-- Online Participation -->
-  <section class="bg-blue-100 py-10">
-    <div class="container mx-auto px-4 max-w-2xl text-center">
-      <h2 class="text-3xl font-bold mb-6">Join Online</h2>
-      <p class="mb-4">Can't make it to Mombasa? Participate in the conference online from anywhere in the world.</p>
-      <a href="https://zoom.us/j/1234567890" target="_blank" class="bg-blue-700 text-white py-2 px-6 rounded text-lg hover:bg-blue-800 transition">Join the Conference Online</a>
-    </div>
-  </section>
-
- <!-- Registration Form -->
-<section class="bg-blue-50 py-10" id="registration">
-  <div class="container mx-auto px-4 max-w-lg">
-    <h2 class="text-3xl font-bold text-center mb-6">Register Now</h2>
-
-    <form name="registration" method="POST" data-netlify="true" action="thankyou.html" class="bg-white p-6 rounded shadow-md">
-      <!-- Hidden input required by Netlify -->
-      <input type="hidden" name="form-name" value="registration" />
-
-      <!-- Full Name Field -->
-      <label class="block mb-2 font-medium" for="name">Full Name</label>
-      <input type="text" id="name" name="name" placeholder="Full Name" class="w-full mb-4 p-2 border rounded" required>
-
-      <!-- Email Field -->
-      <label class="block mb-2 font-medium" for="email">Email Address</label>
-      <input type="email" id="email" name="email" placeholder="Email Address" class="w-full mb-4 p-2 border rounded" required>
-
-      <!-- Organization Field -->
-      <label class="block mb-2 font-medium" for="organization">Organization</label>
-      <input type="text" id="organization" name="organization" placeholder="Organization" class="w-full mb-4 p-2 border rounded">
-
-      <!-- Submit Button -->
-      <button type="submit" class="bg-blue-700 text-white py-2 px-4 rounded w-full hover:bg-blue-800 transition">
-        Submit
-      </button>
-    </form>
-  </div>
-</section>
-
-  <!-- Footer -->
-  <footer class="bg-blue-900 text-white text-center p-6">
-    <p>&copy; 2025 Sub-Saharan Regional Conference. All rights reserved.</p>
-    <p class="mt-2">Contact: <a href="mailto:skillsdevelopment@labour.go.ke" class="underline">skillsdevelopment@labour.go.ke</a> | Phone: +254-700-000-000</p>
-    <div class="mt-2 space-x-4">
-      <a href="#" class="hover:underline">Facebook</a>
-      <a href="#" class="hover:underline">Twitter</a>
-      <a href="#" class="hover:underline">LinkedIn</a>
-    </div>
-  </footer>
-
-  <!-- Countdown Script -->
   <script>
-    const countdown = () => {
-      const eventDate = new Date("2025-05-14T09:00:00").getTime();
-      const now = new Date().getTime();
-      const diff = eventDate - now;
-
-      if (diff < 0) {
-        document.getElementById("countdown").innerText = "Conference is live!";
-        return;
-      }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      document.getElementById("countdown").innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    };
-    setInterval(countdown, 1000);
-  </script>
-
-  <!-- Mobile Menu Toggle -->
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
     });
   </script>
 
+  <!-- [Sections removed for brevity in this preview] -->
+
+  <!-- Registration Section -->
+  <section id="register" class="py-12 px-6 bg-white">
+    <div class="container mx-auto max-w-3xl text-center">
+      <h2 class="text-3xl font-semibold text-green-900 mb-6">Register to Attend</h2>
+      <form class="space-y-4 text-left">
+        <input type="text" placeholder="Full Name" class="w-full border border-gray-300 p-3 rounded-md" required>
+        <input type="email" placeholder="Email Address" class="w-full border border-gray-300 p-3 rounded-md" required>
+        <input type="text" placeholder="Organization" class="w-full border border-gray-300 p-3 rounded-md">
+        <input type="text" placeholder="Country" class="w-full border border-gray-300 p-3 rounded-md">
+        <select class="w-full border border-gray-300 p-3 rounded-md" required>
+          <option value="" disabled selected>Select Participant Type</option>
+          <option>Government Official</option>
+          <option>TVET Provider</option>
+          <option>Employer</option>
+          <option>Youth Representative</option>
+          <option>Development Partner</option>
+        </select>
+        <button type="submit" class="bg-green-900 text-white px-6 py-3 rounded-md hover:bg-green-800">Submit Registration</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <!-- [Footer remains unchanged] -->
 </body>
 </html>
