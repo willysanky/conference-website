@@ -21,154 +21,7 @@
     </div>
   </header>
   
-<!-- Responsive Navbar with Logos and Tabbed Content -->
-<nav class="bg-white shadow-md sticky top-0 z-50">
-  <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-    <!-- Left Logo -->
-    <div class="flex-shrink-0">
-      <img 
-        src="https://raw.githubusercontent.com/willysanky/conference-website/main/Logos/Labourlogo.png" 
-        alt="Labour Logo" 
-        class="h-20 w-auto"
-      />
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <div class="md:hidden">
-      <button id="menu-toggle" class="text-blue-900 focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Navigation Menu -->
-    <div id="nav-menu" class="hidden md:flex md:space-x-6 md:text-base md:font-medium md:text-blue-900">
-      <button class="tab-button hover:text-blue-700 block py-2" data-tab="about">About</button>
-      <button class="tab-button hover:text-blue-700 block py-2" data-tab="themes">Themes</button>
-      <button class="tab-button hover:text-blue-700 block py-2" data-tab="programs">Programs</button>
-      <button class="tab-button hover:text-blue-700 block py-2" data-tab="speakers">Speakers</button>
-      <button class="tab-button hover:text-blue-700 block py-2" data-tab="attendees">Logistic Note</button>
-      <button class="tab-button hover:text-blue-700 block py-2" data-tab="partners">Partners</button>
-    </div>
-
-    <!-- Right Logo -->
-    <div class="flex-shrink-0">
-      <img 
-        src="https://raw.githubusercontent.com/willysanky/conference-website/main/sasanet.jpg" 
-        alt="Sasanet Logo" 
-        class="h-20 w-40 md:h-24 md:w-48 object-contain"
-      />
-    </div>
-  </div>
-
-  <!-- Mobile Navigation Dropdown -->
-  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2">
-    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="about">About</button>
-    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="themes">Themes</button>
-    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="programs">Programs</button>
-    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="speakers">Speakers</button>
-    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="attendees">Logistic Note</button>
-    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="partners">Partners</button>
-  </div>
-</nav>
-
-<!-- Tabbed Content Layout -->
-<section class="py-12 px-6 bg-white">
-  <div class="container mx-auto max-w-5xl">
-    <!-- Tab Content Sections -->
-    <div id="about" class="tab-content hidden">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">About the Conference</h2>
-      <p class="text-gray-700 leading-relaxed">
-        This regional conference brings together stakeholders from across Sub-Saharan Africa to discuss strategies for transforming apprenticeship systems in the informal economy. It aims to promote youth employability through policy dialogue, shared best practices, and innovative partnerships.
-      </p>
-    </div>
-
-    <div id="themes" class="tab-content hidden">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">Conference Themes</h2>
-      <ul class="list-disc pl-5 text-gray-700 space-y-2">
-        <li>Innovative models of apprenticeship for informal sector skills development</li>
-        <li>Strengthening policy frameworks to support apprenticeships</li>
-        <li>Financing and incentivizing apprenticeship systems</li>
-        <li>Gender and inclusion in informal economy training programs</li>
-      </ul>
-    </div>
-
-    <div id="programs" class="tab-content hidden">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">Programs & Activities</h2>
-      <p class="text-gray-700 leading-relaxed">
-        The conference features keynote presentations, panel discussions, workshops, exhibitions, and a youth innovation showcase. Participants will have opportunities to network and explore collaborative projects.
-      </p>
-      
-      <a href="https://raw.githubusercontent.com/willysanky/conference-website/main/PROGRAM.pdf" target="_blank" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-  Download Full Program (PDF)
-</a>
-
-    <div id="speakers" class="tab-content hidden">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">Key Speakers</h2>
-      <p class="text-gray-700 leading-relaxed">
-        A distinguished lineup of government officials, experts, and youth leaders from across Africa and beyond will share their experiences and insights on apprenticeship systems and youth employment strategies.
-      </p>
-    </div>
-
-    <div id="attendees" class="tab-content hidden">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">Who Should Attend?</h2>
-      <p class="text-gray-700 leading-relaxed">
-        Policymakers, employers, educators, youth leaders, and development partners involved in skills development, vocational training, and labor market integration are invited to attend this important event.
-      </p>
-    </div>
-
-    <div id="partners" class="tab-content hidden">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">Our Partners</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <img src="https://via.placeholder.com/150x100" alt="Partner 1" class="object-contain h-24 mx-auto">
-        <img src="https://via.placeholder.com/150x100" alt="Partner 2" class="object-contain h-24 mx-auto">
-        <img src="https://via.placeholder.com/150x100" alt="Partner 3" class="object-contain h-24 mx-auto">
-        <img src="https://via.placeholder.com/150x100" alt="Partner 4" class="object-contain h-24 mx-auto">
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".tab-button");
-    const contents = document.querySelectorAll(".tab-content");
-
-    function hideAllTabs() {
-      contents.forEach(c => c.classList.add("hidden"));
-    }
-
-    buttons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const target = btn.getAttribute("data-tab");
-        hideAllTabs();
-        document.getElementById(target).classList.remove("hidden");
-      });
-    });
-
-    if (contents.length) contents[0].classList.remove("hidden");
-  });
-</script>
-
-
-  <!-- Countdown -->
-  <section class="bg-yellow-100 py-6">
-    <div class="container mx-auto text-center">
-      <p class="text-xl font-semibold">Conference Starts In:</p>
-      <div id="countdown" class="text-2xl mt-2 font-mono"></div>
-    </div>
-  </section>
-  
-<!-- Hero Landing with Background Video -->
+<!-- Video Background Wrapper -->
 <section class="relative h-screen overflow-hidden" id="landing-theme">
   <!-- Background Video -->
   <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
@@ -179,17 +32,81 @@
   <!-- Overlay -->
   <div class="absolute inset-0 bg-blue-900 bg-opacity-50 z-10"></div>
 
-  <!-- Content -->
-  <div class="relative z-20 flex items-center justify-center h-full text-center px-4">
-    <div class="text-white max-w-2xl">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Transforming Apprenticeships in Africa</h1>
-      <p class="text-lg md:text-xl mb-6 leading-relaxed">
-        “Transforming Apprenticeship Systems in the Informal Economy for Youth Employability in Africa”
-      </p>
+  <!-- Content Over Video -->
+  <div class="relative z-20">
+    
+    <!-- Responsive Navbar with Logos and Tabbed Content -->
+    <nav class="bg-transparent px-6 py-4">
+      <div class="container mx-auto flex items-center justify-between">
+        <!-- Left Logo -->
+        <div class="flex-shrink-0">
+          <img 
+            src="https://raw.githubusercontent.com/willysanky/conference-website/main/Logos/Labourlogo.png" 
+            alt="Labour Logo" 
+            class="h-20 w-auto"
+          />
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div id="nav-menu" class="hidden md:flex md:space-x-6 md:text-base md:font-medium text-white">
+          <button class="tab-button hover:text-yellow-300 block py-2" data-tab="about">About</button>
+          <button class="tab-button hover:text-yellow-300 block py-2" data-tab="themes">Themes</button>
+          <button class="tab-button hover:text-yellow-300 block py-2" data-tab="programs">Programs</button>
+          <button class="tab-button hover:text-yellow-300 block py-2" data-tab="speakers">Speakers</button>
+          <button class="tab-button hover:text-yellow-300 block py-2" data-tab="attendees">Logistic Note</button>
+          <button class="tab-button hover:text-yellow-300 block py-2" data-tab="partners">Partners</button>
+        </div>
+
+        <!-- Right Logo -->
+        <div class="flex-shrink-0">
+          <img 
+            src="https://raw.githubusercontent.com/willysanky/conference-website/main/sasanet.jpg" 
+            alt="Sasanet Logo" 
+            class="h-20 w-40 md:h-24 md:w-48 object-contain"
+          />
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Dropdown -->
+      <div id="mobile-menu" class="md:hidden hidden px-6 pt-4 space-y-2 text-white">
+        <button class="tab-button block hover:text-yellow-300" data-tab="about">About</button>
+        <button class="tab-button block hover:text-yellow-300" data-tab="themes">Themes</button>
+        <button class="tab-button block hover:text-yellow-300" data-tab="programs">Programs</button>
+        <button class="tab-button block hover:text-yellow-300" data-tab="speakers">Speakers</button>
+        <button class="tab-button block hover:text-yellow-300" data-tab="attendees">Logistic Note</button>
+        <button class="tab-button block hover:text-yellow-300" data-tab="partners">Partners</button>
+      </div>
+    </nav>
+
+    <!-- Countdown -->
+    <section class="py-6 text-center">
+      <div class="container mx-auto text-white">
+        <p class="text-xl font-semibold">Conference Starts In:</p>
+        <div id="countdown" class="text-2xl mt-2 font-mono"></div>
+      </div>
+    </section>
+
+    <!-- Hero Content -->
+    <div class="flex items-center justify-center text-center px-4 py-10">
+      <div class="text-white max-w-2xl">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Transforming Apprenticeships in Africa</h1>
+        <p class="text-lg md:text-xl mb-6 leading-relaxed">
+          “Transforming Apprenticeship Systems in the Informal Economy for Youth Employability in Africa”
+        </p>
+      </div>
     </div>
+
   </div>
 </section>
-
 
  
   <!-- Speakers -->
