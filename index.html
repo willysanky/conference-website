@@ -21,60 +21,8 @@
     </div>
   </header>
   
-<!-- Responsive Navbar with Logos and Tabbed Content -->
-<nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-  <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-    <!-- Left Logo -->
-    <div class="flex-shrink-0">
-      <img 
-        src="https://raw.githubusercontent.com/willysanky/conference-website/main/Logos/Labourlogo.png" 
-        alt="Labour Logo" 
-        class="h-20 w-auto"
-      />
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <div class="md:hidden">
-      <button id="menu-toggle" class="text-blue-900 focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Navigation Menu -->
-    <div id="nav-menu" class="hidden md:flex md:space-x-6 md:text-base md:font-medium md:text-blue-900">
-      <button class="tab-button hover:text-blue-700 block py-2" data-tab="about">About</button>
-      <button class="tab-button hover:text-blue-700 block py-2" data-tab="themes">Themes</button>
-      <button class="tab-button hover:text-blue-700 block py-2" data-tab="programs">Programs</button>
-      <button class="tab-button hover:text-blue-700 block py-2" data-tab="speakers">Speakers</button>
-      <button class="tab-button hover:text-blue-700 block py-2" data-tab="attendees">Logistic Note</button>
-      <button class="tab-button hover:text-blue-700 block py-2" data-tab="partners">Partners</button>
-    </div>
-
-    <!-- Right Logo -->
-    <div class="flex-shrink-0">
-      <img 
-        src="https://raw.githubusercontent.com/willysanky/conference-website/main/sasanet.jpg" 
-        alt="Sasanet Logo" 
-        class="h-20 w-40 md:h-24 md:w-48 object-contain"
-      />
-    </div>
-  </div>
-
-  <!-- Mobile Navigation Dropdown -->
-  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2">
-    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="about">About</button>
-    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="themes">Themes</button>
-    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="programs">Programs</button>
-    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="speakers">Speakers</button>
-    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="attendees">Logistic Note</button>
-    <button class="tab-button block text-blue-900 hover:text-blue-700" data-tab="partners">Partners</button>
-  </div>
-</nav>
-
-<!-- Hero Landing with Background Video -->
-<section class="relative h-screen overflow-hidden pt-32" id="landing-theme">
+<!-- Fullscreen Video Background with Navbar, Countdown, and Hero -->
+<section class="relative min-h-screen overflow-hidden" id="landing-theme">
   <!-- Background Video -->
   <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
     <source src="https://raw.githubusercontent.com/willysanky/conference-website/main/BG%20Video.mp4" type="video/mp4" />
@@ -84,22 +32,70 @@
   <!-- Overlay -->
   <div class="absolute inset-0 bg-blue-900 bg-opacity-50 z-10"></div>
 
-  <!-- Content -->
-  <div class="relative z-20 flex items-center justify-center h-full text-center px-4">
-    <div class="text-white max-w-2xl">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Transforming Apprenticeships in Africa</h1>
-      <p class="text-lg md:text-xl mb-6 leading-relaxed">
-        “Transforming Apprenticeship Systems in the Informal Economy for Youth Employability in Africa”
-      </p>
-    </div>
-  </div>
-</section>
+  <!-- Content Over Video -->
+  <div class="relative z-20">
 
-<!-- Countdown -->
-<section class="bg-yellow-100 py-6">
-  <div class="container mx-auto text-center">
-    <p class="text-xl font-semibold">Conference Starts In:</p>
-    <div id="countdown" class="text-2xl mt-2 font-mono"></div>
+    <!-- Responsive Navbar -->
+    <nav class="bg-transparent px-6 py-4">
+      <div class="container mx-auto flex items-center justify-between">
+        <!-- Left Logo -->
+        <div class="flex-shrink-0">
+          <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/Logos/Labourlogo.png" alt="Labour Logo" class="h-20 w-auto" />
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div id="nav-menu" class="hidden md:flex md:space-x-6 md:text-base md:font-medium text-white">
+          <button class="tab-button hover:text-yellow-300" data-tab="about">About</button>
+          <button class="tab-button hover:text-yellow-300" data-tab="themes">Themes</button>
+          <button class="tab-button hover:text-yellow-300" data-tab="programs">Programs</button>
+          <button class="tab-button hover:text-yellow-300" data-tab="speakers">Speakers</button>
+          <button class="tab-button hover:text-yellow-300" data-tab="attendees">Logistic Note</button>
+          <button class="tab-button hover:text-yellow-300" data-tab="partners">Partners</button>
+        </div>
+
+        <!-- Right Logo -->
+        <div class="flex-shrink-0">
+          <img src="https://raw.githubusercontent.com/willysanky/conference-website/main/sasanet.jpg" alt="Sasanet Logo" class="h-20 w-40 md:h-24 md:w-48 object-contain" />
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Dropdown -->
+      <div id="mobile-menu" class="md:hidden hidden px-6 pt-4 space-y-2 text-white">
+        <button class="tab-button block hover:text-yellow-300" data-tab="about">About</button>
+        <button class="tab-button block hover:text-yellow-300" data-tab="themes">Themes</button>
+        <button class="tab-button block hover:text-yellow-300" data-tab="programs">Programs</button>
+        <button class="tab-button block hover:text-yellow-300" data-tab="speakers">Speakers</button>
+        <button class="tab-button block hover:text-yellow-300" data-tab="attendees">Logistic Note</button>
+        <button class="tab-button block hover:text-yellow-300" data-tab="partners">Partners</button>
+      </div>
+    </nav>
+
+    <!-- Countdown -->
+    <section class="py-6 text-center">
+      <div class="container mx-auto text-white">
+        <p class="text-xl font-semibold">Conference Starts In:</p>
+        <div id="countdown" class="text-2xl mt-2 font-mono"></div>
+      </div>
+    </section>
+
+    <!-- Hero Content -->
+    <div class="flex items-center justify-center text-center px-4 py-10">
+      <div class="text-white max-w-2xl">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Transforming Apprenticeships in Africa</h1>
+        <p class="text-lg md:text-xl mb-6 leading-relaxed">
+          “Transforming Apprenticeship Systems in the Informal Economy for Youth Employability in Africa”
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -109,26 +105,22 @@
     <!-- Tab Content Sections -->
     <div id="about" class="tab-content hidden">
       <h2 class="text-2xl font-bold text-blue-900 mb-4">About the Conference</h2>
-      <p class="text-gray-700 leading-relaxed">
-        This regional conference brings together stakeholders from across Sub-Saharan Africa to discuss strategies for transforming apprenticeship systems in the informal economy.
-      </p>
+      <p class="text-gray-700">This regional conference brings together stakeholders from across Sub-Saharan Africa to discuss strategies for transforming apprenticeship systems in the informal economy.</p>
     </div>
 
     <div id="themes" class="tab-content hidden">
       <h2 class="text-2xl font-bold text-blue-900 mb-4">Conference Themes</h2>
       <ul class="list-disc pl-5 text-gray-700 space-y-2">
-        <li>Innovative models of apprenticeship</li>
-        <li>Policy frameworks to support apprenticeships</li>
-        <li>Financing and incentives</li>
-        <li>Gender and inclusion</li>
+        <li>Innovative models of apprenticeship for informal sector skills development</li>
+        <li>Strengthening policy frameworks to support apprenticeships</li>
+        <li>Financing and incentivizing apprenticeship systems</li>
+        <li>Gender and inclusion in informal economy training programs</li>
       </ul>
     </div>
 
     <div id="programs" class="tab-content hidden">
       <h2 class="text-2xl font-bold text-blue-900 mb-4">Programs & Activities</h2>
-      <p class="text-gray-700 leading-relaxed">
-        The conference features keynote presentations, panel discussions, and more.
-      </p>
+      <p class="text-gray-700">The conference features keynotes, panel discussions, exhibitions, workshops, and networking.</p>
       <a href="https://raw.githubusercontent.com/willysanky/conference-website/main/PROGRAM.pdf" target="_blank" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
         Download Full Program (PDF)
       </a>
@@ -136,16 +128,12 @@
 
     <div id="speakers" class="tab-content hidden">
       <h2 class="text-2xl font-bold text-blue-900 mb-4">Key Speakers</h2>
-      <p class="text-gray-700 leading-relaxed">
-        Distinguished speakers will share their experiences and insights.
-      </p>
+      <p class="text-gray-700">Distinguished speakers from governments, development agencies, and youth networks will address the forum.</p>
     </div>
 
     <div id="attendees" class="tab-content hidden">
       <h2 class="text-2xl font-bold text-blue-900 mb-4">Logistic Note</h2>
-      <p class="text-gray-700 leading-relaxed">
-        Please find logistics and travel arrangements for all attendees here. Detailed notes can be provided for accommodation, transportation, and local contacts.
-      </p>
+      <p class="text-gray-700">All logistical details including venue, travel, accommodation and participation will be shared here. Please replace this note with the official logistics note before publishing.</p>
     </div>
 
     <div id="partners" class="tab-content hidden">
@@ -160,6 +148,7 @@
   </div>
 </section>
 
+<!-- Tab Switcher Script -->
 <script>
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
@@ -181,12 +170,14 @@
         const target = btn.getAttribute("data-tab");
         hideAllTabs();
         document.getElementById(target).classList.remove("hidden");
+        window.scrollTo({ top: document.getElementById(target).offsetTop - 100, behavior: 'smooth' });
       });
     });
 
     if (contents.length) contents[0].classList.remove("hidden");
   });
 </script>
+
 
  
   <!-- Speakers -->
