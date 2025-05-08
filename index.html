@@ -22,7 +22,7 @@
   </header>
   
 <!-- Fullscreen Video Background with Navbar, Countdown, and Hero -->
-<section class="relative min-h-screen overflow-hidden pt-40" id="landing-theme"> <!-- Added pt-40 here -->
+<section class="relative min-h-screen overflow-hidden pt-64" id="landing-theme">
   <!-- Background Video -->
   <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
     <source src="https://raw.githubusercontent.com/willysanky/conference-website/main/BG%20Video.mp4" type="video/mp4" />
@@ -35,8 +35,8 @@
   <!-- Content Over Video -->
   <div class="relative z-20">
 
-    <!-- Fixed Navbar -->
-    <nav class="bg-transparent px-6 py-4 fixed w-full top-0 left-0 z-20">
+    <!-- Responsive Navbar -->
+    <nav class="bg-transparent px-6 py-4 fixed top-0 left-0 right-0 z-30">
       <div class="container mx-auto flex items-center justify-between">
         <!-- Left Logo -->
         <div class="flex-shrink-0">
@@ -98,6 +98,91 @@
     </div>
   </div>
 </section>
+
+<!-- Tabbed Content Layout -->
+<section class="py-12 px-6 bg-white">
+  <div class="container mx-auto max-w-5xl">
+    <!-- Tab Content Sections -->
+    <div id="about" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">About the Conference</h2>
+      <p class="text-gray-700">This regional conference brings together stakeholders from across Sub-Saharan Africa to discuss strategies for transforming apprenticeship systems in the informal economy.</p>
+    </div>
+
+    <div id="themes" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Conference Themes</h2>
+      <ul class="list-disc pl-5 text-gray-700 space-y-2">
+        <li>Innovative models of apprenticeship for informal sector skills development</li>
+        <li>Strengthening policy frameworks to support apprenticeships</li>
+        <li>Financing and incentivizing apprenticeship systems</li>
+        <li>Gender and inclusion in informal economy training programs</li>
+      </ul>
+    </div>
+
+    <div id="programs" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Programs & Activities</h2>
+      <p class="text-gray-700">The conference features keynotes, panel discussions, exhibitions, workshops, and networking.</p>
+      <a href="https://raw.githubusercontent.com/willysanky/conference-website/main/PROGRAM.pdf" target="_blank" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+        Download Full Program (PDF)
+      </a>
+    </div>
+
+    <div id="speakers" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Key Speakers</h2>
+      <p class="text-gray-700">Distinguished speakers from governments, development agencies, and youth networks will address the forum.</p>
+    </div>
+
+    <div id="attendees" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Logistic Note</h2>
+      <p class="text-gray-700">All logistical details including venue, travel, accommodation and participation will be shared here. Please replace this note with the official logistics note before publishing.</p>
+    </div>
+
+    <div id="partners" class="tab-content hidden">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Our Partners</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <img src="https://via.placeholder.com/150x100" alt="Partner 1" class="object-contain h-24 mx-auto">
+        <img src="https://via.placeholder.com/150x100" alt="Partner 2" class="object-contain h-24 mx-auto">
+        <img src="https://via.placeholder.com/150x100" alt="Partner 3" class="object-contain h-24 mx-auto">
+        <img src="https://via.placeholder.com/150x100" alt="Partner 4" class="object-contain h-24 mx-auto">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tab Switcher Script -->
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".tab-button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    function hideAllTabs() {
+      contents.forEach(c => c.classList.add("hidden"));
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-tab");
+        hideAllTabs();
+        const content = document.getElementById(target);
+        content.classList.remove("hidden");
+
+        // Scroll to the tab content accounting for the fixed navbar height
+        const navbarHeight = document.querySelector('nav').offsetHeight;
+        const contentTop = content.getBoundingClientRect().top + window.scrollY - navbarHeight - 20;
+        window.scrollTo({ top: contentTop, behavior: 'smooth' });
+      });
+    });
+
+    if (contents.length) contents[0].classList.remove("hidden");
+  });
+</script>
+
 
 
  
