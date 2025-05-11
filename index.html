@@ -10,12 +10,14 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-<!-- Header with actual image as background only (no overlay or text) -->
+<!-- Header with actual image as background -->
 <header
-  class="h-[500px] md:h-[600px] bg-cover bg-center bg-no-repeat mt-24"
+ class="h-[500px] md:h-[600px] bg-cover bg-center bg-no-repeat mt-24"
   style="background-image: url('https://raw.githubusercontent.com/willysanky/conference-website/main/Conference%20website.jpg');"
->
+  <!-- Optional overlay to improve text readability -->
+  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
 </header>
+
 
 
 <!-- Fullscreen Video Background with Navbar, Countdown, and Hero -->
