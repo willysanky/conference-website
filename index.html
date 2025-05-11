@@ -10,34 +10,29 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-<!-- Header with background image stretched across the screen -->
-<header
-  class="w-full bg-no-repeat bg-center mt-24"
-  style="background-image: url('https://raw.githubusercontent.com/willysanky/conference-website/main/Conference%20website.jpg');"
->
-  <!-- Content section with full screen height -->
-  <div class="h-full w-full"></div> <!-- Full height of the screen -->
+<!-- Header with background image fully visible and mobile responsive -->
+<header class="w-full mt-24">
+  <div 
+    class="w-full"
+    style="
+      background-image: url('https://raw.githubusercontent.com/willysanky/conference-website/main/Conference%20website.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      height: 100vh;
+    "
+  ></div>
 </header>
 
+<!-- Responsive override for small screens -->
 <style>
-  /* For large screens (desktop and tablet) */
-  header {
-    background-size: cover;
-    background-position: center center;
-    height: 100vh; /* Ensures it takes up the full screen height */
-  }
-
-  /* For small screens (portrait mobile view) */
-  @media (max-width: 767px) {
-    header {
-      background-size: contain; /* Prevents zooming in, ensures the whole image is visible */
-      background-position: center center; /* Keeps the image centered */
-      height: auto; /* Adjust height based on content */
+  @media (max-width: 768px) {
+    header div {
+      height: 100vw; /* match height to viewport width for portrait image */
+      background-size: contain; /* show full image */
     }
   }
 </style>
-
-
 
 
 <!-- Fullscreen Video Background with Navbar, Countdown, and Hero -->
